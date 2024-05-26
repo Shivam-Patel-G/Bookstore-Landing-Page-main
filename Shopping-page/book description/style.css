@@ -1,0 +1,256 @@
+html{
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    color: #ddd;
+    padding: 20px;
+    font-size: large;
+  }
+  header h1{
+    width: 25vw;
+  } 
+  
+  .SearchDiv{
+    display: flex;
+    flex-direction: row;
+    flex-basis:30%;
+    width: 100%;
+    height: 40px;
+    justify-content: space-between;
+    border-radius: 20px;
+    /* padding: 20px; */
+    /* border-bottom: 1px solid black; */
+
+}
+.inputGraph{
+    width: 100%;
+    height: 100%;
+  }
+  .fa-solid.fa-magnifying-glass{
+    font-size: 25px;
+    position: relative;
+    /* bottom: vh; */
+    top: 14%;
+    right: 4.6%;
+    background-color: rgb(255, 255, 255);
+  }
+
+  nav{
+    position: relative;
+    z-index: 1;
+    flex-basis: 40;
+  }
+  /* nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap:40px;
+  } */
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    list-style: none;
+}
+.link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 0.5rem;
+    position: relative;
+    transition: all 0.5s ease ease-in-out;
+}
+.link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    transform: scaleX(0);
+    transform-origin: center;
+}
+.link:hover::before {
+    transition: 2s ease-out ease-in-out;
+    transform: scaleX(1);
+}
+  /* .li {
+    display: inline-block;
+    margin-right: 20px;
+  } */
+  
+  /* .a {
+    text-decoration: none;
+    color: #fff9f9;
+    
+  }
+    */
+  
+  h1, h2 {
+    margin: 0;
+    color: #ddd;
+  }
+  
+  .h2{
+    font-size: larger;
+    align-items: center;
+    color: #ddd;
+  }
+  main{
+    display: flex;
+    padding: 1%;
+    justify-content: space-around;
+    background-color: hsl(0, 0%, 90%);
+  }
+  .main-left{
+    border: #7c7474 solid;
+    height: 80vh;
+    width: 25vw;
+    background-color: hsl(65, 100%, 95%);
+  }
+  .product{
+    display: flex; 
+    overflow-x: scroll; 
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth; 
+    white-space: nowrap;
+    background-color: #000000;
+    
+  }
+  
+  .product img{
+    height: 50vh;
+    padding: 0% 2.5vw;
+    width: 20vw;
+    scroll-snap-align: start;
+  }
+  
+  .main-left ul{
+    display: block;
+  }
+  .main-center{
+    padding: 2%;
+    width: 50vw;
+    
+  }
+  .price{
+    margin-left: 5vw;
+  }
+  .main-right{
+    padding: 1%;
+    width: 20vw;
+    border: #7c7474 solid;
+    background-color: white;
+  }
+  footer {
+    background-color:#000000;
+    color: #ffffff;
+    /* padding: 10px; */
+    text-align: center;
+  }
+  .footer{
+    background-color: #272525;
+    padding: 1%;
+  }
+  .footer-table{
+    display: flex;
+    justify-content: space-around;
+    padding: 1%;
+  }
+  .left-footer{
+    display: flex;
+  }
+  .footer-table ul{
+    display: block;
+    text-align: left;
+    list-style-type:square;
+  }
+  
+  .search{
+    display: inline-block;
+    align-items: center;
+    background-image: #c22957;
+    color: #ddd;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #fff;
+  }
+
+  .search :is(input, button){
+    background: transparent;
+    color: inherit;
+    border: none;
+    outline: none;
+  }
+
+  .searchinput{
+    width:0;
+    transition: width 0.5s;
+  }
+
+  .searchbutton{
+    display: grid;
+    place-items: center;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transition: color 0.25s;
+  }
+  .searchbutton:hover{
+    color:#e3e3e3;
+  }
+
+  .search:focus-within input{
+    max-width: 400px;
+    width:100%;
+  }
+
+  ::placeholder{
+    font: inherit;
+    color:#e3e3e3
+  }
+
+  .glitched-text{
+    color: #fff;
+    font-size: auto;
+    text-align: center;
+    animation: glitch 1.5s infinite alternate;
+  }
+
+  @keyframes glitch{
+    0%{
+      text-shadow:
+      -2px 0 #f90,
+      2px 0 #00ff00;
+    }
+    40%{
+      text-shadow: 
+      -4px 0 #09f
+      4px 0 #90f;
+    }
+    80%{
+      text-shadow: 
+      -4px 0 #00f
+      4px 0 #f00;
+    }
+    100%{
+      text-shadow: 
+      -2px 0 #900,
+      2px 0 #f0f;
+    }
+  }
